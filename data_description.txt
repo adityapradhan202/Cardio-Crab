@@ -1,0 +1,48 @@
+DATA DESCRIPTION
+--------------------------------------------------------
+
+age - age of the person (in years)
+
+sex - gender of the person (1 = male; 0 = female)
+
+chest_pain_type - type of the chest pain
+    Value 0: typical angina
+    Value 1: atypical angina
+    Value 2: non-anginal pain
+    Value 3: asymptomatic
+
+resting_bp - blood pressure while resting (in mm Hg on admission to the hospital)
+
+cholesterol - A person's serum cholesterol in mg/dl
+
+fasting_blood_sugar - Blood sugar while fasting & [ > 120 mg/dl ] (1 = true; 0 = false)
+
+restecg - ECG (electrocardiographic) while resting
+    Value 0: normal
+    Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)
+    Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria
+
+max_hr - Maximum heart rate achieved
+
+exang - exercise-induced angina (1 = yes; 0 = no)
+    Exercise-induced angina (AP) is a common complaint of cardiac patients, particularly when exercising in the cold. It usually happens during activity (exertion) and goes away with rest or angina medication. For example, pain, when walking uphill or in cold weather, maybe angina. Stable angina pain is predictable and usually similar to previous episodes of chest pain.
+
+oldpeak - ST depression induced by exercise relative to rest
+    Exercise-induced ST segment depression is considered a reliable ECG finding for the diagnosis of obstructive coronary atherosclerosis. ST-segment depression is believed as a common electrocardiographic sign of myocardial ischemia during exercise testing. Ischemia is generally defined as oxygen deprivation due to reduced perfusion. ST segment depression less than 0.5 mm is accepted in all leads. ST segment depression 0.5 mm or more is considered pathological.
+
+slope - the slope of the peak exercise ST segment
+    Value 0: upsloping
+    Value 1: flat
+    Value 2: downsloping
+
+num_major_vessels - no. of major vessels (0-3) colored by fluoroscopy
+
+thal - thalassemia
+    0: normal
+    1: fixed defect
+    2: reversible defect
+    People with thalassemia can get too much iron in their bodies, either from the disease or from frequent blood transfusions. Too much iron can result in damage to your heart, liver & endocrine system, which includes hormone-producing glands that regulate processes throughout your body.
+
+target -
+    0 = no disease
+    1 = disease
