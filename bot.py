@@ -28,8 +28,10 @@ Use the /help command to proceed!"""
 help_text = """
 Here are the Cardio-Crabs commands!
 
-You'll need some data from the medical reports before checking your heart health. And to check the list of data that you need use -> /parameters_description
-To check your heart health use -> /check_heart_health
+You'll need some data from the medical reports before checking your heart health. And to check the list of data that you need use -> 
+/description
+To check your heart health use -> 
+/check_heart
 
 If you dont have any data or reports and just wanna test the bot for fun use this data -> 
 https://github.com/adityapradhan202/Cardio-Crab/blob/main/heart_disease.csv
@@ -106,7 +108,7 @@ async def devinfo(update:Update, context:ContextTypes.DEFAULT_TYPE):
     link = 'https://github.com/adityapradhan202'
     await update.message.reply_text(f"Here's the developer's github profile - {link}")
 
-async def parameters_description(update:Update, context:ContextTypes.DEFAULT_TYPE):
+async def description(update:Update, context:ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(parameters_description_text)
 
 async def get_bot_invite_link(update:Update, context:ContextTypes.DEFAULT_TYPE):
@@ -120,7 +122,7 @@ async def get_bot_invite_link(update:Update, context:ContextTypes.DEFAULT_TYPE):
 AGE,SEX,CPT,RBP,CHOL,FBS,RECG,MAXHR,EXANG,OPEAK,SLOPE,NMV,THAL = range(13)
 
 # starting point
-async def check_heart_health(update:Update, context:CallbackContext):
+async def check_heart(update:Update, context:CallbackContext):
 
     await update.message.reply_text('IMPORTANT - Use the /cancel the process to cancel or stop the bot at any moment!')
     await update.message.reply_text("How old are you?")
@@ -268,7 +270,7 @@ if __name__ == "__main__":
     start_cmd_handler = CommandHandler('start', start)
     help_cmd_handler = CommandHandler('help', help)
     devinfo_cmd_handler = CommandHandler('devinfo', devinfo)
-    para_descript_handler = CommandHandler('parameters_description', parameters_description)
+    para_descript_handler = CommandHandler('description', description)
 
     app.add_handler(start_cmd_handler)
     app.add_handler(help_cmd_handler)
@@ -277,7 +279,7 @@ if __name__ == "__main__":
 
     # conversation handler
     conv_handler = ConversationHandler(
-        entry_points=[CommandHandler("check_heart_health", check_heart_health)],
+        entry_points=[CommandHandler("check_heart", check_heart)],
         states={
             AGE: [MessageHandler((filters.TEXT & ~filters.COMMAND), get_age_ask_sex)],
             SEX: [MessageHandler((filters.TEXT & ~filters.COMMAND), get_sex_ask_cpt)],
