@@ -21,7 +21,7 @@ async def start(update:Update, context:ContextTypes.DEFAULT_TYPE):
 
 😥 Got your results but there's still time for the doctor consultation?
 😉 Don't worry Cardio-Crab has got your brack!
-        
+      
 Use the /help command to proceed!"""
     )
 
@@ -294,7 +294,6 @@ if __name__ == "__main__":
             SLOPE: [MessageHandler((filters.TEXT & ~filters.COMMAND), get_slope_ask_nmv)],
             NMV: [MessageHandler((filters.TEXT & ~filters.COMMAND), get_nmv_ask_thal)],
             THAL: [MessageHandler((filters.TEXT & ~filters.COMMAND), model_final_output)]
-
         },
         fallbacks=[CommandHandler("cancel", cancel)]
     )
