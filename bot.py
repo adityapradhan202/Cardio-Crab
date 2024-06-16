@@ -20,7 +20,7 @@ async def start(update:Update, context:ContextTypes.DEFAULT_TYPE):
 """🦀 Welcome to Cardio-Crab!
 
 😥 Got your results but there's still time for the doctor consultation?
-😉 Don't worry Cardio-Crab has got your brack!
+😉 Don't worry Cardio-Crab has got your back!
       
 Use the /help command to proceed!"""
     )
